@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-dark-cyan:hsl(158, 36%, 37%);
+    --color-cream:hsl(30, 38%, 92%);
+
+    --color-dark-blue:hsl(212, 21%, 14%);
+    --color-dark-grey: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+
+    --font-family-primary:"Fraunces", serif;
+    --font-family-secondary: "Montserrat", sans-serif;
+
+}
+
+p,
+h1,
+h2{
+    overflow-wrap: break-word;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+    width: 100%;
+}
+
+
+body{
+    background-color: var(--color-cream);
+    display: grid;
+    align-items: center;
+   justify-content: center;
+   padding-top: 10rem;
+    
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    right: 39%;
+}
+
+.attribution a{
+    color: var(--color-dark-cyan);
+    text-decoration: none;
+}
+
+
+
+main{
+    position: relative;
+}
+
+
+
+
+
+.card__perfume{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 700px;
+    background-color: var(--white);
+    border-radius: 10px;
+    
+}
+
+
+.card__img img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+}
+
+.card__text{
+     padding-left: 2.2rem; 
+}
+
+.card__text .perfume{
+    margin-top: 2.2rem;
+    margin-bottom: 1.4rem;
+    letter-spacing: 5px;
+    font-size: .8rem;
+    color: var(--color-dark-grey);
+    font-weight: 550;
+    font-family: var(--font-family-secondary);
+}
+
+
+.card__text .card__title{
+    font-family: var(--font-family-primary);
+
+    font-size: 2.4rem;
+    width: 80%;
+    color: var(--color-dark-blue);
+    font-weight: 750;
+    margin-bottom: 1.6rem;
+    line-height: 1;
+}
+
+.card__text .card__description{
+    font-family: var(--font-family-secondary);
+    color: var(--color-dark-grey);
+    font-weight: 500;
+    line-height: 1.6;
+    padding-right: 2rem;
+    margin-bottom: 1.9rem;
+} 
+
+
+
+
+
+
+
+
+
+.prices{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+}
+
+.prices span:first-child{
+    color: var(--color-dark-cyan);
+    font-size: 2.2rem;
+    font-weight: 650;
+    font-family: var(--font-family-primary);
+}
+
+.prices span:last-child{
+    color: var(--color-dark-grey);
+    font-family: var(--font-family-secondary);
+    font-weight: 450;
+}
+
+.prices span:last-child::before{
+    content: '';
+    height: 1px;
+    top: 22px;
+    position: absolute;
+    background-color: var(--color-dark-grey);
+    opacity: 0.6;
+    width: 3.5rem;
+
+}
+
+
+
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark-cyan);
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    text-decoration: none;
+    padding: 1.150rem;
+    border-radius: 10px;
+    font-weight: 650;
+    font-family: var(--font-family-secondary);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.btn:hover{
+    background-color: hsl(158, 36%, 20%);
+}
+
+.btn i{
+    position: absolute;
+    left: 4rem;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+/* BREAKPOINTS  */
+
+@media screen and (max-width:780px){
+    .card__perfume{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 30em;
+        
+
+    }
+   .card__img img{
+    height: 320px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    border-bottom-left-radius: 0px;
+
+
+   }
+
+   .card__text{
+    padding-left: 1.5rem; 
+}
+
+.card__text .perfume{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+.card__text .card__description{
+    line-height: 1.6;
+    width: 90%;
+    margin-bottom: 1.3rem;
+} 
+
+}
+
+
+
+
+/****************************************/
+
+
+
+@media screen and (max-width:376px){
+    .card__perfume{
+        width: 21.7em;
+    }
+    body{
+        padding-top: 1.8rem;
+    }
+
+    .card__img img{
+        height: 245px;
+       }
+
+       .card__text .card__title{
+        font-size: 2rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .card__text .card__description{
+        color: var(--color-dark-grey);
+        line-height: 1.6;
+        font-size: .870rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    } 
+    .prices{
+        gap: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .btn{
+        width: 94%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .9rem;
+        padding: .9rem;
+        margin-bottom: 1.7rem;;
+    }
+
+    .prices span:last-child{
+        font-size: .9rem;
+    }
+
+    .prices span:last-child::before{
+        width: 3.4rem;
+    
+    }
+
+    .attribution{
+        display: none;
+    }
+}
